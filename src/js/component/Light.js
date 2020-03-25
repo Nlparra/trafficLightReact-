@@ -1,28 +1,27 @@
-import React from "react";
 import React, { useState } from "react";
 
 export function Light() {
-    const [color, setColor] = useState("Green");
-    
-    
-    handleClick(){
-        setColor ("selectedGreen");
-    };
+	const [state, setState] = useState({color:""});
 
-
-
+	const handleClick = (color) => {
+        if ()
+		setColor("selectedGreen");
+	};
 
 	return (
 		<div className="container">
-			<div className={color} onClick={handleClick}>
+			<button className={"redUnselected " +  color}  onClick={handleClick(green)}>
 				{" "}
-			</div>
-			{/* <div className="yellow" onClick="selectedValue()">
+				Click
+			</button>
+			<button className={color.yellow} onClick={handleClick}>
 				{" "}
-			</div>
-			<div className="green" onClick="selectedValue()">
+				Click
+			</button>
+			<button className={color.red} onClick={handleClick}>
 				{" "}
-			</div> */}
+				Click
+			</button>
 		</div>
 	);
 }
