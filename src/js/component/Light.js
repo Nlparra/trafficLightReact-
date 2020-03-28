@@ -1,27 +1,25 @@
 import React, { useState } from "react";
 
 export function Light() {
-	const [state, setState] = useState({color:""});
+	const [light, setLight] = useState("");
 
-	const handleClick = (color) => {
-        if ()
-		setColor("selectedGreen");
+	const handleClick = e => {
+		let { target } = e;
+		// console.log(target, target.parentNode);
+		Array.from(target.parentNode.children).forEach(item => {
+			if (item.id === target.id) {
+				target.classList.add("selectedColor");
+			} else {
+				item.classList.remove("selectedColor");
+			}
+		});
 	};
 
 	return (
 		<div className="container">
-			<button className={"redUnselected " +  color}  onClick={handleClick(green)}>
-				{" "}
-				Click
-			</button>
-			<button className={color.yellow} onClick={handleClick}>
-				{" "}
-				Click
-			</button>
-			<button className={color.red} onClick={handleClick}>
-				{" "}
-				Click
-			</button>
+			<button id="redLight" onClick={handleClick} />
+			<button id="yellowLight" onClick={handleClick} />
+			<button id="greenLight" onClick={handleClick} />
 		</div>
 	);
 }

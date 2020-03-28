@@ -6,26 +6,28 @@
     width: 400px;
 }
 
-.red{
+#redLight{
     background: red;
     height: 33%;
     border-radius: 100%;
+    width: 100%;
 }
 
-.yellow{
+#yellowLight{
     background: yellow;
     height: 33%;
     border-radius: 100%;
+    width: 100%;
 }
 
-.green{
+#greenLight{
     background: green;
     height: 33%;
     border-radius: 100%;
+    width: 100%;
 }
 
-.selectedGreen{
-    background: blue;
-    height: 33%;
-    border-radius: 100%;
+.selectedColor{
+    box-shadow: #fff 0px 0px 40px 20px;
+    z-index: 1000;
 }
