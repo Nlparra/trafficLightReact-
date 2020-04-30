@@ -11,15 +11,19 @@ export function Light() {
 				target.classList.add("selectedColor");
 			} else {
 				item.classList.remove("selectedColor");
+				console.log("HEEEEEYYY", item);
 			}
 		});
 	};
 
 	return (
+        <>
+        <h1>Im a Light</h1>
 		<div className="container">
 			<button id="redLight" onClick={handleClick} />
 			<button id="yellowLight" onClick={handleClick} />
 			<button id="greenLight" onClick={handleClick} />
 		</div>
+        </>
 	);
 }
